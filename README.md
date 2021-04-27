@@ -20,14 +20,14 @@ We need to find the sensor value, when ever user touches the aluminum foil that 
 void setup()
 {
   Serial.begin(115200);
-  delay(1000); // give me time to bring up serial monitor
+  delay(250); // give me time to bring up serial monitor
   Serial.println("ESP32 Touch Test");
 }
 
 void loop()
 {
-  Serial.println(touchRead(T6));  // get value using T0
-  delay(1000);
+  Serial.println(touchRead(T6));  // get value using T6
+  delay(250);
 }
 ```
 * Copy the program , paste it in Arduino IDE & save it
