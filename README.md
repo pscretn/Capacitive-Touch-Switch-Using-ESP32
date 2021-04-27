@@ -29,7 +29,7 @@ void loop()
   Serial.println(touchRead(T6));  // get value using T0
   delay(1000);
 }
-```<br><br>
+```
 * Copy the program , paste it in Arduino IDE & save it
 * Select the proper board and upload to it
 * After Done Uploading , open Serial Monitor or press `Ctrl` + `Shift` + `M`
