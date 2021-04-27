@@ -14,7 +14,7 @@ We need to find the sensor value, when ever user touches the aluminum foil that 
 * Connect the circuit as shown in the figure above 
 * Connect the usb cable to ESP32 and connect to computer
 * Launch Arduino IDE in computer
-## program <br><br>
+## Program <br><br>
 ``` cpp
 
 void setup()
@@ -29,4 +29,8 @@ void loop()
   Serial.println(touchRead(T6));  // get value using T0
   delay(1000);
 }
-```
+```<br><br>
+* Copy the program , paste it in Arduino IDE & save it
+* Select the proper board and upload to it
+* After Done Uploading , open Serial Monitor or press `Ctrl` + `Shift` + `M`
+* Set baud rate to `115200`
