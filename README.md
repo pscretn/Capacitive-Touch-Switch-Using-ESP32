@@ -35,9 +35,41 @@ void loop()
 * After Done Uploading , open Serial Monitor or press `Ctrl` + `Shift` + `M`
 * Set baud rate to `115200`
 <img src="images/Screenshot%20(269).png"><br><br>
-Sensor Value decreases when user touches the aluminum foil , Here i am going to take a threshold value of `45` in touch-switch program<br<br>
+Sensor Value decreases when user touches the aluminum foil , Here i am going to take a threshold value of `45` in touch-switch program<br>
 # Capacitive-Switch
 Now we are going to make the capacitive switch using the help of `touchRead()` function
 ## Schematic<br><br>
 <img src="images/2021-04-22_01-02.png"/> <br><br>
+* Connect the circuit as shown in the figure above 
+* Connect the usb cable to ESP32 and connect to computer
+* Launch Arduino IDE in computer
+## Program <br><br>
+``` cpp
+const unsigned long interval=200;  // const unsigned long interval is the used to give delay in program without interrupting the execution of program 
+unsigned long previoustime=0; // we  used unsigned long data type to avoid occuring of error while working
+int button=0;
+void setup() {
+  
+ pinMode(13, OUTPUT); //Pin D13 in ESP32
+ digitalWrite(13, LOW);
+}
 
+void loop() {
+  unsigned long currenttime=millis(); // millis() : Returns the number of milliseconds passed since the Arduino board began running the current program
+ 
+if (touchRead(T6) < 45 and button == 0){  // T6 is pin D14 on ESP32 it is capable to work as a touch sensor  
+  if (currenttime - previoustime >= interval){
+   digitalWrite(13, HIGH);
+   button=1;
+   previoustime=currenttime;
+}
+}
+else if (touchRead(T6) <45 and button == 1) {
+  if (currenttime - previoustime >= interval){
+   digitalWrite(13, LOW);
+   button=0;
+   previoustime=currenttime;
+}
+}
+}
+```
