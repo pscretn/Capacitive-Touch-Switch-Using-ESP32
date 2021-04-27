@@ -10,4 +10,23 @@ We can use any of pin GPIO4 , GPIO2 , GPIO15 , GPIO12 , GPIO13 , GPIO14 , GPIO32
 #  Sensor Reading
 We need to find the sensor value, when ever user touches the aluminum foil that is connected to ESP32. For that we use `touchRead()` function, that accepts as argument, the GPIO you want to read.
 ## Schematic <br><br>
-<img src="images/2021-04-22_01-02.png"   />  <br><br>
+<img src="images/2021-04-22_01-02.png"/> <br><br>
+* Connect the circuit as shown in the figure above 
+* Connect the usb cable to ESP32 and connect to computer
+* Launch Arduino IDE in computer
+## program <br><br>
+``` Arduino
+
+void setup()
+{
+  Serial.begin(115200);
+  delay(1000); // give me time to bring up serial monitor
+  Serial.println("ESP32 Touch Test");
+}
+
+void loop()
+{
+  Serial.println(touchRead(T6));  // get value using T0
+  delay(1000);
+}
+```
