@@ -10,7 +10,7 @@ We can use any of pin GPIO4 , GPIO2 , GPIO15 , GPIO12 , GPIO13 , GPIO14 , GPIO32
 #  Sensor Reading
 We need to find the sensor value, when ever user touches the aluminum foil that is connected to ESP32. For that we use `touchRead()` function, that accepts as argument, the GPIO you want to read.
 ## Schematic <br><br>
-<img src="images/2021-04-22_01-02.png"/> <br><br>
+<img src="images/img1.jpg"/> <br><br>
 * Connect the circuit as shown in the figure above 
 * Connect the usb cable to ESP32 and connect to computer
 * Launch Arduino IDE in computer
@@ -34,4 +34,10 @@ void loop()
 * Select the proper board and upload to it
 * After Done Uploading , open Serial Monitor or press `Ctrl` + `Shift` + `M`
 * Set baud rate to `115200`
-<img src="images/Screenshot%20(269).png">
+<img src="images/Screenshot%20(269).png"><br><br>
+Sensor Value decreases when user touches the aluminum foil , Here i am going to take a threshold value of `45` in touch-switch program<br<br>
+# Capacitive-Switch
+Now we are going to make the capacitive switch using the help of `touchRead()` function
+## Schematic<br><br>
+<img src="images/2021-04-22_01-02.png"/> <br><br>
+
