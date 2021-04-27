@@ -33,7 +33,7 @@ void loop()
 * Copy the program , paste it in Arduino IDE & save it
 * Select the proper board and upload to it
 * After Done Uploading , open Serial Monitor or press `Ctrl` + `Shift` + `M`
-* Set baud rate to `115200`
+* Set baud rate to `115200`<br><br>
 <img src="images/Screenshot%20(269).png"><br><br>
 Sensor Value decreases when user touches the aluminum foil , Here i am going to take a threshold value of `45` in touch-switch program<br>
 # Capacitive-Switch
@@ -73,3 +73,9 @@ else if (touchRead(T6) <45 and button == 1) {
 }
 }
 ```
+* Copy the program , paste it in Arduino IDE & save it
+* Select the proper board and upload to it
+* Now, test your circuit
+* Touch the aluminum foil and see the LED lighting turning on
+* Again touch the aluminum foil and see the LED lighting turning off
+
