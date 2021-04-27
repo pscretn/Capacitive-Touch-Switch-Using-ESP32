@@ -44,6 +44,7 @@ Now we are going to make the capacitive switch using the help of `touchRead()` f
 * Connect the usb cable to ESP32 and connect to computer
 * Launch Arduino IDE in computer
 ## Program <br><br>
+Here in the program shown below , we are going to use `millis()` Function to avoid the use of hardware delay
 ``` cpp
 const unsigned long interval=200;  // const unsigned long interval is the used to give delay in program without interrupting the execution of program 
 unsigned long previoustime=0; // we  used unsigned long data type to avoid occuring of error while working
