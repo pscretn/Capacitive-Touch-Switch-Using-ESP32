@@ -15,7 +15,7 @@ We need to find the sensor value, when ever user touches the aluminum foil that 
 * Connect the usb cable to ESP32 and connect to computer
 * Launch Arduino IDE in computer
 ## program <br><br>
-``` Arduino
+``` cpp
 
 void setup()
 {
