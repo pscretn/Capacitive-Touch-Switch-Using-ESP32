@@ -10,4 +10,4 @@ We can use any of pin GPIO4 , GPIO2 , GPIO15 , GPIO12 , GPIO13 , GPIO14 , GPIO32
 # Touch Sensor Reading
 first of all we need to find the sensor value when ever user touches the aluminum foil that is connected to ESP32. For that we use `touchRead()` function, that accepts as argument, the GPIO you want to read.
 ## Schematic 
-<img src="images/ESP32-pinout.png"   />  <br><br>
+<img src="images/2021-04-22_01-02.png"   />  <br><br>
